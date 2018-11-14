@@ -113,6 +113,10 @@ Execute the following query in the Hive Query Editor (not Impala Query Editor)
 		    'output.format.string' = "%1$$s %2$$s %3$$s %4$$s %5$$s %6$$s %7$$s %8$$s %9$$s")
 		LOCATION '/user/hive/warehouse/original_access_logs';
 		
+		* External table does not save the table. Requires "Create table on *"
+		* File type is determined by SerDe
+		
+		
 * Create an external table on this new table
 
 		CREATE EXTERNAL TABLE tokenized_access_logs (
